@@ -14,6 +14,7 @@ MODEL_VERSION = "111arpt4pnrma0cpydtr8n0qx0"  # replace with latest if needed
 
 @replicate_bp.route('/replicate/generate', methods=['POST'])
 def generate():
+    print("Received request to generate image using Replicate API")
     data = request.get_json()
     prompt = data.get("prompt")
 

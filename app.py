@@ -7,6 +7,7 @@ import sys
 # Import blueprints
 from routes.main import main_bp
 from routes.replicate import replicate_bp
+from routes.prodigi import prodigi_bp
 
 # Import middleware
 from middleware import register_middleware
@@ -33,6 +34,7 @@ def create_app():
     # Register blueprints
     app.register_blueprint(main_bp)
     app.register_blueprint(replicate_bp, url_prefix='/api')
+    app.register_blueprint(prodigi_bp, url_prefix='/api')
     
     return app
 
