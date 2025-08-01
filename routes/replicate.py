@@ -23,7 +23,7 @@ def generate():
     
     try:
         output = replicate.run(
-            "google/imagen-4",
+            "black-forest-labs/flux-1.1-pro",
             input={
                 "prompt": prompt
             }
